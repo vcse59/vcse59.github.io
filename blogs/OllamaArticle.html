@@ -1,100 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ollama Chatbot Guide</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <h2>What is Ollama</h2>
-    <p>Ollama is a powerful, open-source tool that allows you to run large language models (LLMs) entirely on your local
-        machine, without relying on cloud-based services. It provides an easy way to download, manage, and run AI models
-        with optimized performance, leveraging GPU acceleration when available.</p>
+    <div class="container">
+        <header>
+            <h1>Ollama Chatbot Guide</h1>
+        </header>
 
-    <h3>Key Features:</h3>
-    <ul>
-        <li>✅ Run LLMs Locally – No internet required after downloading models.</li>
-        <li>✅ Easy Model Management – Download, switch, and update models effortlessly.</li>
-        <li>✅ Optimized for Performance – Uses GPU acceleration for faster inference.</li>
-        <li>✅ Private & Secure – No data leaves your machine.</li>
-        <li>✅ Custom Model Support – Modify and fine-tune models for specific tasks.</li>
-        <li>✅ Simple API & CLI – Interact with models programmatically or via command line.</li>
-    </ul>
+        <section class="intro">
+            <h2>What is Ollama</h2>
+            <p>Ollama is a powerful, open-source tool that allows you to run large language models (LLMs) entirely on your local machine, without relying on cloud-based services. It provides an easy way to download, manage, and run AI models with optimized performance, leveraging GPU acceleration when available.</p>
+        </section>
 
-    <h3>How It Works:</h3>
-    <ol>
-        <li>Install Ollama – A simple install command sets it up.</li>
-        <li>Pull a Model – Example: <strong>ollama pull mistral</strong> to download Mistral-7B.</li>
-        <li>Run a Model – Example: <strong>ollama run mistral</strong> to start interacting.</li>
-        <li>Integrate with Code – Use the API for automation and app development.</li>
-    </ol>
+        <section class="features">
+            <h3>Key Features:</h3>
+            <ul>
+                <li>✅ Run LLMs Locally – No internet required after downloading models.</li>
+                <li>✅ Easy Model Management – Download, switch, and update models effortlessly.</li>
+                <li>✅ Optimized for Performance – Uses GPU acceleration for faster inference.</li>
+                <li>✅ Private & Secure – No data leaves your machine.</li>
+                <li>✅ Custom Model Support – Modify and fine-tune models for specific tasks.</li>
+                <li>✅ Simple API & CLI – Interact with models programmatically or via command line.</li>
+            </ul>
+        </section>
 
-    <hr>
+        <section class="how-it-works">
+            <h3>How It Works:</h3>
+            <ol>
+                <li>Install Ollama – A simple install command sets it up.</li>
+                <li>Pull a Model – Example: <strong>ollama pull mistral</strong> to download Mistral-7B.</li>
+                <li>Run a Model – Example: <strong>ollama run mistral</strong> to start interacting.</li>
+                <li>Integrate with Code – Use the API for automation and app development.</li>
+            </ol>
+        </section>
 
-    <h2>Create an API microservice to interact with Ollama models</h2>
-    <p>We'll use FastAPI to create a microservice that interacts with Ollama models.</p>
+        <hr>
 
-    <p><strong>FastAPI Code: </strong>
-        <a href="https://github.com/vcse59/GenerativeAI/blob/Ollama_Chatbot/Ollama-Microservice/ollama.py"
-            target="_blank">[Ollama.py]</a>
-    </p>
+        <section class="api-microservice">
+            <h2>Create an API microservice to interact with Ollama models</h2>
+            <p>We'll use FastAPI to create a microservice that interacts with Ollama models.</p>
+            <p><strong>FastAPI Code: </strong>
+                <a href="https://github.com/vcse59/GenerativeAI/blob/Ollama_Chatbot/Ollama-Microservice/ollama.py" target="_blank">[Ollama.py]</a>
+            </p>
+            <h3>Start the API microservice</h3>
+            <pre><code>uvicorn Ollama:app --host 0.0.0.0 --port 8000</code></pre>
+            <h3>Output in Postman:</h3>
+            <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/z8fid7n4m2pwi0msah1q.png" alt="Output in Postman" class="img-responsive">
+        </section>
 
-    <h3>Start the API microservice</h3>
-    <code>uvicorn Ollama:app --host 0.0.0.0 --port 8000</code>
+        <hr>
 
-    <h3>Output in Postman:</h3>
-    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/z8fid7n4m2pwi0msah1q.png"
-        alt="Output in Postman">
+        <section class="react-native-chatbot">
+            <h2>Create a React Native chatbot to call the API microservice to process user query</h2>
+            <p>Now, let's build a React Native chatbot that will communicate with the API microservice.</p>
 
-    <hr>
+            <p><strong>Main Chatbot UI: </strong>
+                <a href="https://github.com/vcse59/GenerativeAI/blob/Ollama_Chatbot/Ollama-ChatBot/src/App.js" target="_blank">[App.js]</a>
+            </p>
 
-    <h2>Create a React Native chatbot to call the API microservice to process user query</h2>
-    <p>Now, let's build a React Native chatbot that will communicate with the API microservice.</p>
+            <p><strong>Chat Interface: </strong>
+                <a href="https://github.com/vcse59/GenerativeAI/blob/Ollama_Chatbot/Ollama-ChatBot/src/components/ChatbotUI.js" target="_blank">[ChatbotUI.js]</a>
+            </p>
 
-    <p><strong>Main Chatbot UI: </strong>
-        <a href="https://github.com/vcse59/GenerativeAI/blob/Ollama_Chatbot/Ollama-ChatBot/src/App.js"
-            target="_blank">[App.js]</a>
-    </p>
+            <h3>Start the React Native application</h3>
+            <pre><code># npm install</code></pre>
+            <pre><code># npm run web</code></pre>
 
-    <p><strong>Chat Interface: </strong>
-        <a href="https://github.com/vcse59/GenerativeAI/blob/Ollama_Chatbot/Ollama-ChatBot/src/components/ChatbotUI.js"
-            target="_blank">[ChatbotUI.js]</a>
-    </p>
+            <h3>Output:</h3>
+            <p>Output can be watched at
+                <a href="https://www.youtube.com/watch?v=V40wit53nXg&list=PLMAl7jx1HypUfCqRjIrsFmARAXAbiBW7g&index=1" target="_blank">[Video]</a>
+            </p>
+        </section>
 
-    <h3>Start the React Native application</h3>
-    <code># npm install</code>
-    <code># npm run web</code>
+        <hr>
 
-    <h3>Output:</h3>
-    <p>Output can be watched at
-        <a href="https://www.youtube.com/watch?v=V40wit53nXg&list=PLMAl7jx1HypUfCqRjIrsFmARAXAbiBW7g&index=1"
-            target="_blank">[Video]</a>
-    </p>
-
-    <hr>
-
-    <h2>Conclusion</h2>
-    <p>Building a chatbot using Ollama models provides a powerful and private AI experience by running large language
-        models locally. By integrating Ollama with a FastAPI microservice and a React Native frontend, we created a
-        seamless, interactive chatbot that processes user queries efficiently.</p>
-
-    <p>This approach offers:</p>
-    <ul>
-        <li>✅ Full control over AI models without cloud dependencies.</li>
-        <li>✅ Optimized performance using GPU acceleration when available.</li>
-        <li>✅ Enhanced privacy, as no data is sent to external servers.</li>
-    </ul>
-
-    <p>Whether you're developing an AI assistant, a customer support bot, or experimenting with LLMs, this setup
-        provides a strong foundation for further improvements and customization. 🚀</p>
-
-    <p><strong>Complete code can be found at </strong>
-        <a href="https://github.com/vcse59/GenerativeAI/tree/Ollama_Chatbot" target="_blank">[GitHub]</a>
-    </p>
+        <section class="conclusion">
+            <h2>Conclusion</h2>
+            <p>Building a chatbot using Ollama models provides a powerful and private AI experience by running large language models locally. By integrating Ollama with a FastAPI microservice and a React Native frontend, we created a seamless, interactive chatbot that processes user queries efficiently.</p>
+            <ul>
+                <li>✅ Full control over AI models without cloud dependencies.</li>
+                <li>✅ Optimized performance using GPU acceleration when available.</li>
+                <li>✅ Enhanced privacy, as no data is sent to external servers.</li>
+            </ul>
+            <p>Whether you're developing an AI assistant, a customer support bot, or experimenting with LLMs, this setup provides a strong foundation for further improvements and customization. 🚀</p>
+            <p><strong>Complete code can be found at </strong>
+                <a href="https://github.com/vcse59/GenerativeAI/tree/Ollama_Chatbot" target="_blank">[GitHub]</a>
+            </p>
+        </section>
+    </div>
 
 </body>
-
 </html>
