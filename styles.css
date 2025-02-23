@@ -1,0 +1,154 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.blog-posts {
+    flex: 3;
+    margin-right: 20px;
+}
+
+.post {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.post h2 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.post h2 a:hover {
+    color: #007BFF;
+}
+
+.post .date {
+    color: #888;
+    font-size: 14px;
+}
+
+.post .excerpt {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.read-more {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+aside {
+    flex: 1;
+}
+
+.search,
+.categories {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search button {
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #0056b3;
+}
+
+.categories ul {
+    list-style: none;
+}
+
+.categories ul li {
+    margin: 10px 0;
+}
+
+.categories ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.categories ul li a:hover {
+    color: #007BFF;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}

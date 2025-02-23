@@ -1,13 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
 <body>
-    <h1>Personal Blog</h1>
-    <p>
-        This online platform features articles, tutorials, case studies, and opinion pieces on topics like programming, software
-        development, hardware, networking, data science, and emerging technologies. The content is written with technical
-        expertise, designed to educate, inform, and engage tech enthusiasts, professionals, and learners.
-    </p>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-posts">
+            <article class="post">
+                <h2><a href="#">Blog Post Title 1</a></h2>
+                <p class="date">Posted on February 23, 2025</p>
+                <p class="excerpt">This is a brief description or excerpt of the first blog post...</p>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+
+            <article class="post">
+                <h2><a href="#">Blog Post Title 2</a></h2>
+                <p class="date">Posted on February 20, 2025</p>
+                <p class="excerpt">This is a brief description or excerpt of the second blog post...</p>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+
+            <article class="post">
+                <h2><a href="#">Blog Post Title 3</a></h2>
+                <p class="date">Posted on February 18, 2025</p>
+                <p class="excerpt">This is a brief description or excerpt of the third blog post...</p>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+        </section>
+
+        <aside>
+            <section class="search">
+                <h3>Search</h3>
+                <form action="#" method="get">
+                    <input type="text" placeholder="Search blog posts" name="query">
+                    <button type="submit">Search</button>
+                </form>
+            </section>
+
+            <section class="categories">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Tech</a></li>
+                    <li><a href="#">Lifestyle</a></li>
+                    <li><a href="#">Business</a></li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Blog. All rights reserved.</p>
+    </footer>
+
 </body>
 
 </html>
