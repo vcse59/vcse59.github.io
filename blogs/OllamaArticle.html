@@ -1,0 +1,82 @@
+## What is Ollama
+
+Ollama is a powerful, open-source tool that allows you to run large language models (LLMs) entirely on your local
+machine, without relying on cloud-based services. It provides an easy way to download, manage, and run AI models with
+optimized performance, leveraging GPU acceleration when available.
+
+## Key Features:
+
+✅ Run LLMs Locally – No internet required after downloading models.
+✅ Easy Model Management – Download, switch, and update models effortlessly.
+✅ Optimized for Performance – Uses GPU acceleration for faster inference.
+✅ Private & Secure – No data leaves your machine.
+✅ Custom Model Support – Modify and fine-tune models for specific tasks.
+✅ Simple API & CLI – Interact with models programmatically or via command line.
+
+How It Works:
+
+1. Install Ollama – A simple install command sets it up.
+2. Pull a Model – Example: **ollama pull mistral** to download Mistral-7B.
+3. Run a Model – Example: **ollama run mistral** to start interacting.
+4. Integrate with Code – Use the API for automation and app development.
+
+---
+
+## Create a API microservice to interact with Ollama models
+
+We'll use FastAPI to create a microservice that interacts with Ollama models.
+
+**FastAPI Code :
+<u>[Ollama.py](https://github.com/vcse59/GenerativeAI/blob/Ollama_Chatbot/Ollama-Microservice/ollama.py)</u>**
+
+
+**Start the API microservice**
+
+`uvicorn Ollama:app --host 0.0.0.0 --port 8000`
+
+**Output in Postman:**
+
+![Output in Postman](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/z8fid7n4m2pwi0msah1q.png)
+
+---
+
+
+## Create a react native chat bot to call API microservice to process user query
+
+Now, let's build a React Native chatbot that will communicate with the API microservice.
+
+
+**Main Chatbot UI :
+<u>[App.js](https://github.com/vcse59/GenerativeAI/blob/Ollama_Chatbot/Ollama-ChatBot/src/App.js)</u>**
+
+
+**Chat Interface :
+<u>[ChatbotUI.js](https://github.com/vcse59/GenerativeAI/blob/Ollama_Chatbot/Ollama-ChatBot/src/components/ChatbotUI.js)</u>**
+
+**Start the react native application**
+
+`# npm install`
+`# npm run web`
+
+**Output :**
+
+Output can be watched at
+[Video](https://www.youtube.com/watch?v=V40wit53nXg&list=PLMAl7jx1HypUfCqRjIrsFmARAXAbiBW7g&index=1)
+
+---
+
+## Conclusion
+
+Building a chatbot using Ollama models provides a powerful and private AI experience by running large language models
+locally. By integrating Ollama with a FastAPI microservice and a React Native frontend, we created a seamless,
+interactive chatbot that processes user queries efficiently.
+
+This approach offers:
+✅ Full control over AI models without cloud dependencies.
+✅ Optimized performance using GPU acceleration when available.
+✅ Enhanced privacy, as no data is sent to external servers.
+
+Whether you're developing an AI assistant, a customer support bot, or experimenting with LLMs, this setup provides a
+strong foundation for further improvements and customization. 🚀
+
+**Complete code can be found at [GitHub](https://github.com/vcse59/GenerativeAI/tree/Ollama_Chatbot)**
